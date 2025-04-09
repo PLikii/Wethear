@@ -1,21 +1,22 @@
-import AboutMe from "@/components/aboutMe";
-import Career from "@/components/career";
-import Navbar from "@/components/navbar";
-import Skills from "@/components/skills";
-import Contacts from "@/components/contacts";
-import Footer from "@/components/footer";
+import Image from "next/image";
+import CitySelection from "./(site)/(home)/components/CitySelection";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <div className=" mx-6 my-10 flex flex-col gap-20 sm:my-28 lg:mx-36 lg:gap-28">
-        <AboutMe />
-        <Career />
-        <Skills />
-        <Contacts />
+    <main className="bg-gradient-to-r from-fuchsia-500 to-cyan-500">
+      <Image
+        src="/images/storm.jpg"
+        quality={100}
+        fill
+        alt=""
+        className="pointer-events-none object-cover"
+      />
+      <div
+        className="flex items-center justify-center"
+        style={{ minHeight: "85vh" }}
+      >
+        <CitySelection />
       </div>
-      <Footer />
-    </div>
+    </main>
   );
 }
